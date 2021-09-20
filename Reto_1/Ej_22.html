@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejercicio 22</title>
+		
+		<script>
+			var ano =prompt("introduce tu ano de nacimiento");
+			var mes =prompt("introduce tu mes de nacimiento");
+			var dia =prompt("introduce tu dia de nacimiento");
+
+			miFecha = new Date(ano,parseInt(mes)-1,dia);
+			fechaHoy = new Date();
+			var edad = fechaHoy.getYear() - miFecha.getYear();
+			alert(edad); 
+		</script>
+		
+</head>
+<body>
+		
+</body>
+</html>

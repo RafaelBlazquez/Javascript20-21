@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejercicio 11</title>
+		
+		<script>
+			var oracion = "";
+			var frase = true;
+			while(frase != null ){
+				frase = prompt("Introduzca una cadena de caracteres");
+				if (frase != null){
+					if (oracion == ""){
+						oracion = frase;
+					}
+					else{
+						var oracion = oracion + " - " + frase;
+					}
+				}
+			}
+				alert(oracion);
+		</script>
+		
+</head>
+<body>
+		
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejercicio 19</title>
+		
+		<script>
+			var vocales =0;
+			var consonantes=0;
+			var palabra =prompt ("Introduzca una palabra");
+			var letrasvocales = ["A","E","I","O","U","a","e","i","o","u"];
+				for (x= 0 ; x< palabra.length; x++ ){
+					letra = palabra.charAt(x);
+					if (isNaN(letra)){
+						if (letrasvocales.includes(letra)){
+							vocales = parseFloat(vocales)+1;
+						}else{
+							consonantes = parseFloat(consonantes)+1;	
+						}
+					}
+				}
+				var porcentaje = parseFloat(vocales)/(parseFloat(vocales)+parseFloat(consonantes))*100;
+				alert(porcentaje);
+		</script>
+		
+</head>
+<body>
+		
+</body>
+</html>

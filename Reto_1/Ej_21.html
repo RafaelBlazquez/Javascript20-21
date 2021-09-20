@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejercicio 21</title>
+		
+		<script>
+			lineas = new Array();
+			linea= new Array();
+			var valor = "";
+			var resultado = "";
+			while (valor !=null){
+					for (x= 0 ; x<2 ; x++){
+						var valor = parseFloat(prompt("Introduce el numero"));
+							linea[x]= valor;
+					}
+					linea[2]=linea[0]+linea[1];
+					lineas.push(linea);
+					
+					var valor = prompt("Quieres continuar?");
+
+				}
+			alert(lineas);
+		</script>
+		
+</head>
+<body>
+		
+</body>
+</html>

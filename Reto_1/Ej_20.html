@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejercicio 20</title>
+		
+		<script>
+			var unos = [1,3,2,5,4];
+			var otros = new Array(5);
+			var respuesta="";
+			for(var x = 0 ; x<5; x++){
+				var numero = prompt("Introduce un salario");
+					otros[x]= numero;	
+			}
+			var opcion ="n";
+			while (opcion !="m"){
+				opcion = prompt("a --> pares p.a. \nb --> buscar en s.a \nc --> mostrar >10 p.a. \nd --> crear string p.a. \ne --> borrar 1,2-3-4,5 s.a \nf --> unir y visualizar \ng --> crear impares p.a. \nh --> sumar dos s.a \ni --> duplicar posicion >4 p.a \nj --> todo seises s.a \nk --> mostrar invertido \nl --> ordenar >< \nm --> salir");
+					respuesta = "";
+				switch(opcion){
+					case "a":
+						for (i in unos){
+							if (unos[i]%2 == 0){
+								respuesta =respuesta + " " + unos[i];
+							}
+						}
+						alert(respuesta);
+					break;
+
+					case "b":
+						let busqueda = prompt("Introduce el numero a buscar");
+						for (i in otros){
+							if (otros[i] == busqueda){
+								respuesta =respuesta + " " + (parseInt(i)+1);
+							}
+						}
+						alert(respuesta);
+					break;
+
+					case "c":
+						for (i in unos){
+							if (unos[i] >10){
+								respuesta =respuesta + " " + unos[i];
+							}
+						}
+						alert(respuesta);
+					break;
+
+					case "d":
+						respuesta = otros.toString();
+						alert(respuesta);
+					break;
+
+					case "e":
+						otros.shift();
+						otros.pop();
+						let random = Math.random();
+						if ( random > 0.66){
+							otros.pop();
+						}
+						else{
+							if (random < 0.33){
+								otros.shift();
+							}
+							else{
+								otros.splice(1,1);
+							}
+						}
+						alert(respuesta);
+					break;
+
+					case "f":
+						respuesta = unos.concat(otros);
+						alert(respuesta);
+					break;
+
+					case "g":
+					var algunos= new Array();
+						for (i in unos){
+							if (unos[i]%2 != 0){
+								respuesta =respuesta + " " + unos[i];
+							algunos.push(unos[i]);	
+
+							}//Respuesta (String) = Algunos (Array)
+						}
+						alert(algunos);
+					break;
+
+					case "h":
+						otros.forEach(numero => {parseFloat(numero)+2,index});
+						//otros.forEach(numero => {alert(parseFloat(numero)+2)});
+						/*otros.forEach(function(numero){
+							alert(parseFloat(numero)+2)
+						})*/
+
+						/*for (i in otros)
+							otros[i] = parseFloat(otros[i])+2;*/
+						alert(otros);
+					break;
+
+					case "i":
+						let numerouno = unos[0];
+						let numerodos = unos[1];
+						unos.splice(4,0,numerouno,numerodos);
+					
+						alert(unos);
+					break;
+
+					case "j":
+						otros.fill(6);
+					
+						alert(otros);
+					break;
+
+					case "k":
+						otros.reverse();
+					
+						alert(otros);
+					break;
+
+					case "l":
+						unos.sort();
+						unos.reverse();
+						alert(unos);
+					break;
+
+					case "m":
+						alert("adios");
+					break;
+				}
+
+
+			}
+				
+			</script>
+
+		
+	
+		
+</head>
+<body>
+		
+</body>
+</html>
