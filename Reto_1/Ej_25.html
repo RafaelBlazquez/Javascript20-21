@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejercicio 25</title>
+		
+		<script>
+
+			frase = prompt("Introduzca una cadena de caracteres");
+			var letras = 0;
+			var mayus = 0;
+			var minus = 0;
+			for (x=0;x<frase.length;x++){
+				if (frase.charAt(x) != " "){
+					if (frase.charAt(x).toUpperCase() == frase.charAt(x)){
+						mayus++;
+					}
+					else{
+						minus++;
+					}
+				}
+
+			}
+			
+			if (mayus!= 0 && minus != 0){
+				alert("Mezcla");
+			}
+			else{
+				if(mayus== 0){
+					alert("Solo minusculas");
+				}
+				else{
+					alert("Solo mayusculas");
+				}
+			}
+
+			var frasemayus = frase.toUpperCase();
+			if(frasemayus.includes("HOLA")){
+				alert("contiene");
+			}
+			else{
+				alert("no contiene");
+			}
+
+			var arrayletras = frase.split("");
+			alert(arrayletras);
+
+			var arraypalabras = frase.split(" ");
+			alert(arraypalabras);
+
+			frasedos = frase.replace("v","b"); 		
+			alert(frasedos);
+
+			
+			
+			while(frase.length <=20){
+				frase=frase+":";
+			}
+			alert(frase);
+		</script>
+		
+</head>
+<body>
+		
+</body>
+</html>

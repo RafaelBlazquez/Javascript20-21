@@ -10,8 +10,26 @@
 
 			miFecha = new Date(ano,parseInt(mes)-1,dia);
 			fechaHoy = new Date();
-			var edad = fechaHoy.getYear() - miFecha.getYear();
-			alert(edad); 
+			var edad = fechaHoy.getYear()- miFecha.getYear();
+
+			//var edadreal = (edad/1000/60/60/24/364);
+			if (fechaHoy.getMonth() < miFecha.getMonth()){	
+					edad--; 
+			}
+			else{
+			 	if (fechaHoy.getMonth() == miFecha.getMonth()){
+
+			 		if (fechaHoy.getDate() == miFecha.getDate()){
+			 			edad= "Feliz Cumplea&ntilde;os n&uacute;mero " + edad;
+			 		}
+			 		else{
+				 		if(fechaHoy.getDate() < miFecha.getDate()){
+				 			edad--;
+				 		}	
+			 		}	
+				}
+			}
+			document.write(edad);
 		</script>
 		
 </head>

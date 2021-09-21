@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejercicio 27</title>
+		
+		<script>
+			var mensaje = "Hola";
+			var sueldo =prompt ("Introduzca sueldo");
+			var antiguedad =prompt ("Introduzca antiguedad");
+
+			if(sueldo<500){
+				if (antiguedad>=10){
+					sueldo=Math.round(sueldo*1.2);
+					alert("Nuevo sueldo = "+sueldo)	
+				}
+				else{
+					sueldo=Math.round(sueldo*1.1);
+					alert("Nuevo sueldo = "+sueldo)	
+				}
+			}
+			else
+				alert(sueldo);
+		</script>
+		
+</head>
+<body>
+		
+</body>
+</html>

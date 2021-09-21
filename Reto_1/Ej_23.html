@@ -4,17 +4,19 @@
 	<title>Ejercicio 23</title>
 		
 		<script>
-			var ano = 2030;
-			var mes = 1;
-			var dia = 1;
-
-			var ano2 = 2050;
-			var mes2 = 12;
-			var dia2 = 12;
+			fecha = new Date(2030,0,1);
+			var lunes=0;
+			do{
+				fecha.setDate(fecha.getDate() + 1);
+				if(fecha.getDay()==0 && fecha.getDate()==1 && fecha.getMonth()==0){
+					lunes++;
+				}
+			}
+			while (fecha.getYear() <150)
+				
 
 			
-			var edad = fechaHoy.getYear() - miFecha.getYear();
-			alert(edad); 
+			alert(lunes);
 		</script>
 		
 </head>

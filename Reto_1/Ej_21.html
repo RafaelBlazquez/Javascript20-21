@@ -5,21 +5,27 @@
 		
 		<script>
 			lineas = new Array();
-			linea= new Array();
-			var valor = "";
+			var valor = true;
 			var resultado = "";
-			while (valor !=null){
-					for (x= 0 ; x<2 ; x++){
-						var valor = parseFloat(prompt("Introduce el numero"));
-							linea[x]= valor;
-					}
-					linea[2]=linea[0]+linea[1];
-					lineas.push(linea);
-					
-					var valor = prompt("Quieres continuar?");
 
+				for (y= 0 ; y<5 ; y++){
+					lineas[y] = new Array(3)
+					for (x= 0 ; x<2 ; x++){
+						valor = parseFloat(prompt("Introduce el numero"));
+						lineas[y][x]= valor;
+					}
+				
+					lineas[y][2]=lineas[y][0]+lineas[y][1];
+					valor = confirm("Quieres continuar?");
+					
+					if (!valor){
+						y=4;
+					}
 				}
-			alert(lineas);
+
+			for (y=0; y< lineas.length; y++){
+				document.write(lineas[y][0] +" + "+ lineas[y][1] +" = " +lineas[y][2]+ "<br>");
+			}
 		</script>
 		
 </head>
@@ -27,3 +33,4 @@
 		
 </body>
 </html>
+    
